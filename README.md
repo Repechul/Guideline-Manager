@@ -1,8 +1,8 @@
-Guideline Manager - Plugin for Godot 4.x
- ==================================================
+# Guideline Manager - Plugin for Godot 4.x
+
  
- INSTALLATION
- -----------
+### INSTALLATION
+ 
  1. Copy the "guideline_manager" folder into "addons" in your project.
  2. Go to Project > Project Settings > Plugins.
  3. Activate "Guide Manager".
@@ -12,8 +12,10 @@ Guideline Manager - Plugin for Godot 4.x
 
 5. Expandable with Shift+F12 like any native bottom dock.
 
-LANGUAGE
-------
+---
+
+### LANGUAGE
+
 The plugin automatically detects the editor's language:
 - If the editor is in Spanish (es, es_ES, etc.), it displays the UI in Spanish.
 
@@ -21,16 +23,18 @@ The plugin automatically detects the editor's language:
 
 Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
 
-USAGE
 ---
-GUIDE LIST (left column)
+
+### USAGE
+
+- **GUIDE LIST (left column)**
 Displays all guides in the active scene with the prefix [H] or [V],
 name (if any), and pixel position.
 
 Updates automatically when changing scenes.
 Includes scrolling for long lists.
 
-CREATE GUIDE (right column, top section)
+- **CREATE GUIDE** (right column, top section)
 
 1. Enter an optional name.
 
@@ -42,12 +46,12 @@ CREATE GUIDE (right column, top section)
 
 5. Press "Create Guide".
 
-CREATE CENTERED GUIDES
+- **CREATE CENTERED GUIDES**
 
 The "Create Guides Centered to Viewport" button creates a horizontal guide and a vertical guide at the exact center of the viewport.
 It is automatically hidden if both centered guides already exist.
 
-EDIT GUIDE
+- **EDIT GUIDE**
 
 1. Select a guide from the list.
 
@@ -55,20 +59,22 @@ EDIT GUIDE
 
 3. Press "Apply Changes".
 
-DELETE GUIDE
+- **DELETE GUIDE**
 
 1. Select a guide from the list.
 
  2. Press "Delete Selected Guide".
 
-UNDO / REDO
+- **UNDO / REDO**
 
 All operations (create, edit, delete) are compatible with the Godot editor's Ctrl+Z / Ctrl+Y keys.
 
-TECHNICAL NOTES
---------------
-- Names are stored in the root node's metadata: _edit_guide_names_
+---
+
+- **TECHNICAL NOTES**
+
+- Names are stored in the root node's metadata: `_edit_guide_names_`
 - Guides use the same native Godot metadata:
 
-_edit_horizontal_guides_ / _edit_vertical_guides_
+`_edit_horizontal_guides_` / `_edit_vertical_guides_`
 - Compatible with Godot 4.x
