@@ -1,14 +1,9 @@
 Guideline Manager - Plugin for Godot 4.x
  ==================================================
- FACILITY
+ 
+ INSTALLATION
  -----------
- 1. Copy the "guideline_manager" folder into "addons" in your project:
-      res://addons/guideline_manager/plugin.cfg
-      res://addons/guideline_manager/plugin.gd
-      res://addons/guideline_manager/gm_locale.gd
-      res://addons/guideline_manager/guideline_manager_panel.gd
-      res://addons/guideline_manager/guideline_manager_panel.tscn
-
+ 1. Copy the "guideline_manager" folder into "addons" in your project.
  2. Go to Project > Project Settings > Plugins.
  3. Activate "Guide Manager".
  4. Appears as a "Guide Manager" tab in the editor's bottom panel
