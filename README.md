@@ -43,6 +43,7 @@ CREATE GUIDE (right column, top section)
 5. Press "Create Guide".
 
 CREATE CENTERED GUIDES
+
 The "Create Guides Centered to Viewport" button creates a horizontal guide and a vertical guide at the exact center of the viewport.
 It is automatically hidden if both centered guides already exist.
 
