@@ -1,16 +1,6 @@
-# Guideline Manager
-<br>
-<div align="center">
- <img src="addons/guideline_manager/asset_icon.png" width="256">
- </div>
- <br>
-A simple Dock editor for creating and managing viewport guide lines in Godot.
+# Guideline Manager - Plugin for Godot 4.x
 
-Compatible with Godot 4.3+ — tested on 4.6.x
-
-
----
-
+ 
 ### INSTALLATION
  
  1. Copy the "guideline_manager" folder into "addons" in your project.
@@ -41,9 +31,8 @@ Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
 Displays all guides in the active scene with the prefix [H] or [V],
 name (if any), and pixel position.
 
-When changing scenes or opening a new one, click Reload in Guideline Manager to view the guides for the current scene.
-
-(Currently, Guideline Manager does not automatically update when changing scenes.)
+Updates automatically when changing scenes.
+Includes scrolling for long lists.
 
 - **CREATE GUIDE** (right column, top section)
 
@@ -82,9 +71,10 @@ All operations (create, edit, delete) are compatible with the Godot editor's Ctr
 
 ---
 
-### TECHNICAL NOTES
+- **TECHNICAL NOTES**
 
 - Names are stored in the root node's metadata: `_edit_guide_names_`
 - Guides use the same native Godot metadata:
 
 `_edit_horizontal_guides_` / `_edit_vertical_guides_`
+- Compatible with Godot 4.x
