@@ -36,8 +36,9 @@ Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
 Displays all guides in the active scene with the prefix [H] or [V],
 name (if any), and pixel position.
 
-Updates automatically when changing scenes.
-Includes scrolling for long lists.
+When changing scenes or opening a new one, click Reload in Guideline Manager to view the guides for the current scene.
+
+(Currently, Guideline Manager does not automatically update when changing scenes.)
 
 - **CREATE GUIDE** (right column, top section)
 
