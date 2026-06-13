@@ -1,8 +1,13 @@
 # Guideline Manager
-
+<br>
+<div align="center">
+ <img src="addons/guideline_manager/asset_icon.png" width="256">
+ </div>
+ <br>
 A simple Dock editor for creating and managing viewport guide lines in Godot.
 
 Compatible with Godot 4.3+ — tested on 4.6.x
+
 
 ---
 
