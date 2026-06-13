@@ -1,6 +1,10 @@
-# Guideline Manager - Plugin for Godot 4.x
+# Guideline Manager
 
- 
+A simple Dock editor for creating and managing viewport guide lines in Godot.
+Godot minimum version 4.3↑
+
+---
+
 ### INSTALLATION
  
  1. Copy the "guideline_manager" folder into "addons" in your project.
