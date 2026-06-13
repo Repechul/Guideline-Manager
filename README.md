@@ -2,7 +2,7 @@
 
 A simple Dock editor for creating and managing viewport guide lines in Godot.
 
-Godot minimum version 4.3↑
+Compatible with Godot 4.3+ — tested on 4.6.x
 
 ---
 
