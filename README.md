@@ -77,10 +77,9 @@ All operations (create, edit, delete) are compatible with the Godot editor's Ctr
 
 ---
 
-- **TECHNICAL NOTES**
+### TECHNICAL NOTES
 
 - Names are stored in the root node's metadata: `_edit_guide_names_`
 - Guides use the same native Godot metadata:
 
 `_edit_horizontal_guides_` / `_edit_vertical_guides_`
-- Compatible with Godot 4.x
