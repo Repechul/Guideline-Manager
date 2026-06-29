@@ -6,12 +6,12 @@
  <br>
 A simple Dock editor for creating and managing viewport guide lines in Godot.
 
-Compatible with Godot 4.3+ — tested on 4.6.x
+Compatible with Godot 4.3+ — tested on 4.7
 
 
 ---
 
-### INSTALLATION
+### Installation
  
  1. Copy the "guideline_manager" folder into "addons" in your project.
  2. Go to Project > Project Settings > Plugins.
@@ -24,20 +24,9 @@ Compatible with Godot 4.3+ — tested on 4.6.x
 
 ---
 
-### LANGUAGE
+### Usage
 
-The plugin automatically detects the editor's language:
-- If the editor is in Spanish (es, es_ES, etc.), it displays the UI in Spanish.
-
-- Any other language displays the UI in English.
-
-Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
-
----
-
-### USAGE
-
-- **GUIDE LIST (left column)**
+- **Guide List (Left Column)**
 Displays all guides in the active scene with the prefix [H] or [V],
 name (if any), and pixel position.
 
@@ -45,7 +34,7 @@ When changing scenes or opening a new one, click Reload in Guideline Manager to 
 
 (Currently, Guideline Manager does not automatically update when changing scenes.)
 
-- **CREATE GUIDE** (right column, top section)
+- **Create Guide** (Right Column, Top Section)
 
 1. Enter an optional name.
 
@@ -57,12 +46,12 @@ When changing scenes or opening a new one, click Reload in Guideline Manager to 
 
 5. Press "Create Guide".
 
-- **CREATE CENTERED GUIDES**
+- **Create Centered Guides**
 
 The "Create Guides Centered to Viewport" button creates a horizontal guide and a vertical guide at the exact center of the viewport.
 It is automatically hidden if both centered guides already exist.
 
-- **EDIT GUIDE**
+- **Edit Guide**
 
 1. Select a guide from the list.
 
@@ -70,19 +59,30 @@ It is automatically hidden if both centered guides already exist.
 
 3. Press "Apply Changes".
 
-- **DELETE GUIDE**
+- **Delete Guide**
 
 1. Select a guide from the list.
 
  2. Press "Delete Selected Guide".
 
-- **UNDO / REDO**
+- **Undo / Redo**
 
 All operations (create, edit, delete) are compatible with the Godot editor's Ctrl+Z / Ctrl+Y keys.
 
 ---
 
-### TECHNICAL NOTES
+### Language
+
+The plugin automatically detects the editor's language:
+- If the editor is in Spanish (es, es_ES, etc.), it displays the UI in Spanish.
+
+- Any other language displays the UI in English.
+
+Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
+
+---
+
+### Technical Notes
 
 - Names are stored in the root node's metadata: `_edit_guide_names_`
 - Guides use the same native Godot metadata:
