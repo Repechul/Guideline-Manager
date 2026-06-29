@@ -1,14 +1,14 @@
 @tool
 extends EditorPlugin
 
-const PANEL_SCENE = preload("res://addons/guideline_manager/guideline_manager_panel.tscn")
+const panel_scene = preload("res://addons/guideline_manager/guideline_manager_panel.tscn")
 const Locale = preload("res://addons/guideline_manager/gm_locale.gd")
 
 var panel_instance
 var _opened: bool = false
 
 func _enter_tree() -> void:
-	panel_instance = PANEL_SCENE.instantiate()
+	panel_instance = panel_scene.instantiate()
 	panel_instance.editor_plugin = self
 	add_control_to_bottom_panel(panel_instance, Locale.t("panel_title"))
 	# --- main_screen_changed pertenece al EditorPlugin, no al EditorInterface ---
@@ -31,5 +31,5 @@ func _exit_tree() -> void:
 func _get_plugin_name() -> String:
 	return "Guideline Manager"
 
-#func _get_plugin_icon() -> Texture2D:
-#	return load("res://addons/guideline_manager/icon.svg")
+func _get_plugin_icon() -> Texture2D:
+  return load("res://addons/guideline_manager/icon.svg")
