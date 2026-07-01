@@ -6,14 +6,14 @@
  <br>
 A simple Dock editor for creating and managing viewport guide lines in Godot.
 
-Compatible with Godot 4.3+ — tested on 4.7
+**Compatible** with Godot **4.5+** — tested on **4.7**
 
 
 ---
 
 ### Installation
  
- 1. Copy the "guideline_manager" folder into "addons" in your project.
+ 1. Copy the **"guideline_manager"** folder into "addons" in your project.
  2. Go to Project > Project Settings > Plugins.
  3. Activate "Guide Manager".
  4. Appears as a "Guide Manager" tab in the editor's bottom panel
@@ -34,7 +34,9 @@ When changing scenes or opening a new one, click Reload in Guideline Manager to 
 
 (Currently, Guideline Manager does not automatically update when changing scenes.)
 
-- **Create Guide** (Right Column, Top Section)
+---
+
+## Create Guide (Right Column, Top Section)
 
 1. Enter an optional name.
 
@@ -46,12 +48,16 @@ When changing scenes or opening a new one, click Reload in Guideline Manager to 
 
 5. Press "Create Guide".
 
-- **Create Centered Guides**
+---
+
+## Create Centered Guides
 
 The "Create Guides Centered to Viewport" button creates a horizontal guide and a vertical guide at the exact center of the viewport.
 It is automatically hidden if both centered guides already exist.
 
-- **Edit Guide**
+---
+
+## Edit Guide
 
 1. Select a guide from the list.
 
@@ -59,13 +65,15 @@ It is automatically hidden if both centered guides already exist.
 
 3. Press "Apply Changes".
 
-- **Delete Guide**
+---
+
+## Delete Guide
 
 1. Select a guide from the list.
 
  2. Press "Delete Selected Guide".
 
-- **Undo / Redo**
+## Undo / Redo
 
 All operations (create, edit, delete) are compatible with the Godot editor's Ctrl+Z / Ctrl+Y keys.
 
@@ -87,4 +95,4 @@ Configure in Editor > Editor Settings > Interface > Editor > Editor Language.
 - Names are stored in the root node's metadata: `_edit_guide_names_`
 - Guides use the same native Godot metadata:
 
-`_edit_horizontal_guides_` / `_edit_vertical_guides_`
+```_edit_horizontal_guides_``` / ```_edit_vertical_guides_```
