@@ -32,8 +32,6 @@ name (if any), and pixel position.
 
 When changing scenes or opening a new one, click Reload in Guideline Manager to view the guides for the current scene.
 
-(Currently, Guideline Manager does not automatically update when changing scenes.)
-
 ---
 
 ## Create Guide (Right Column, Top Section)
