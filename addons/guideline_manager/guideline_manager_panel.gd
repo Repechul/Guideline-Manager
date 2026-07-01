@@ -1,9 +1,9 @@
 @tool
 extends ScrollContainer
 
-const META_NAMES = "_edit_guide_names_"
-const META_H = "_edit_horizontal_guides_"
-const META_V = "_edit_vertical_guides_"
+const meta_names = "_edit_guide_names_"
+const meta_h = "_edit_horizontal_guides_"
+const meta_v = "_edit_vertical_guides_"
 
 const Locale = preload("res://addons/guideline_manager/gm_locale.gd")
 
@@ -46,10 +46,6 @@ func _ready() -> void:
 	btn_apply.pressed.connect(_on_apply_edit)
 	guide_list.item_selected.connect(_on_item_selected)
 
-	editor_plugin.get_editor_interface().get_editor_main_screen().child_entered_tree.connect(
-		func(_n): call_deferred("_refresh_list")
-	)
-
 	_apply_locale()
 	_set_axis_visual("horizontal")
 	_refresh_list()
@@ -82,12 +78,12 @@ func _get_guides(root: Node) -> Dictionary:
 	var result = {"horizontal": [], "vertical": [], "names": {}}
 	if not root:
 		return result
-	if root.has_meta(META_H):
-		result["horizontal"] = root.get_meta(META_H).duplicate()
-	if root.has_meta(META_V):
-		result["vertical"] = root.get_meta(META_V).duplicate()
-	if root.has_meta(META_NAMES):
-		result["names"] = root.get_meta(META_NAMES).duplicate()
+	if root.has_meta(meta_h):
+		result["horizontal"] = root.get_meta(meta_h).duplicate()
+	if root.has_meta(meta_v):
+		result["vertical"] = root.get_meta(meta_v).duplicate()
+	if root.has_meta(meta_names):
+		result["names"] = root.get_meta(meta_names).duplicate()
 	return result
 
 func _commit_guides(root: Node, new_data: Dictionary, old_data: Dictionary, action_name: String) -> void:
@@ -100,9 +96,9 @@ func _commit_guides(root: Node, new_data: Dictionary, old_data: Dictionary, acti
 	undo.commit_action()
 
 func _apply_guide_data(root: Node, data: Dictionary) -> void:
-	root.set_meta(META_H, data["horizontal"])
-	root.set_meta(META_V, data["vertical"])
-	root.set_meta(META_NAMES, data["names"])
+	root.set_meta(meta_h, data["horizontal"])
+	root.set_meta(meta_v, data["vertical"])
+	root.set_meta(meta_names, data["names"])
 	editor_plugin.get_editor_interface().mark_scene_as_unsaved()
 
 func _save_if_needed() -> void:
@@ -155,8 +151,8 @@ func _on_item_selected(idx: int) -> void:
 	selected_axis = meta["axis"]
 	edit_pos.value = meta["pos"]
 	var root = _get_root()
-	if root and root.has_meta(META_NAMES):
-		edit_name.text = root.get_meta(META_NAMES).get(meta["key"], "")
+	if root and root.has_meta(meta_names):
+		edit_name.text = root.get_meta(meta_names).get(meta["key"], "")
 	else:
 		edit_name.text = ""
 	_update_edit_section(true)

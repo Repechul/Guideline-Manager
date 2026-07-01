@@ -1,7 +1,7 @@
 @tool
 extends RefCounted
 
-const STRINGS = {
+const strings_lang = {
 	"en": {
 		"panel_title": "Guideline Manager",
 		"scene_label": "Scene:",
@@ -62,4 +62,4 @@ static func get_lang() -> String:
 
 static func t(key: String) -> String:
 	var lang = get_lang()
-	return STRINGS[lang].get(key, STRINGS["en"].get(key, key))
+	return strings_lang[lang].get(key, strings_lang["en"].get(key, key))
